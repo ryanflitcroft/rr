@@ -1,0 +1,88 @@
+// media aliases and breakpoints
+$one-rem: 0.063rem;
+$xs-min: 20rem;
+$sm-min: 36rem;
+$md-min: 48rem;
+$lg-min: 64rem;
+$xl-min: 80rem;
+$fullhd: 120rem;
+
+// represents min minus 1 px
+$under-sm: 35.938rem;
+$under-md: 47.938rem;
+$under-lg: 63.938rem;
+$under-xl: 79.938rem;
+$under-fullhd: 119.938rem;
+
+// media devices
+@mixin xs-viewport {
+  @media screen and (min-width: #{$xs-min}) {
+    @content;
+  }
+}
+
+@mixin sm-viewport {
+  @media screen and (min-width: #{$sm-min}) {
+    @content;
+  }
+}
+
+@mixin md-viewport {
+  @media screen and (min-width: #{$md-min}) {
+    @content;
+  }
+}
+
+@mixin lg-viewport {
+  @media screen and (min-width: #{$lg-min}) {
+    @content;
+  }
+}
+
+@mixin xl-viewport {
+  @media screen and (min-width: #{$xl-min}) {
+    @content;
+  }
+}
+
+@mixin xs-only {
+  @media screen and (max-width: #{$under-sm}) {
+    @content;
+  }
+}
+
+@mixin sm-only {
+  @media screen and (min-width: #{$sm-min}) and (max-width: #{$under-md}) {
+    @content;
+  }
+}
+
+@mixin md-only {
+  @media screen and (min-width: #{$md-min}) and (max-width: #{$under-lg}) {
+    @content;
+  }
+}
+
+@mixin lg-only {
+  @media screen and (min-width: #{$lg-min}) and (max-width: #{$under-xl}) {
+    @content;
+  }
+}
+
+@mixin xl-only {
+  @media screen and (min-width: #{$xl-min}) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}

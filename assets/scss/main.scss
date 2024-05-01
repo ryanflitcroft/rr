@@ -1,0 +1,54 @@
+:root {
+  --z-hide: 0;
+  --z-show: 5;
+  --z-header: 20;
+  --z-main: 0;
+  --z-modal: 50;
+}
+
+// stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-backface-visibility: inherit;
+  backface-visibility: inherit;
+}
+
+html {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+body {
+  min-height: -webkit-fill-available;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  scroll-behavior: smooth;
+}
+
+/*
+  IMAGES
+*/
+
+img {
+  max-width: 100%;
+}
+
+.img-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 16/9;
+  width: 100%;
+
+  &[data-ratio='square'] {
+    aspect-ratio: 1/1;
+  }
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}

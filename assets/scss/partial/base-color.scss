@@ -1,0 +1,144 @@
+/*
+  COLOR VARIABLES
+*/
+
+:root {
+    // Brand Colors
+    --color-darkgreen: rgb(11 64 34);
+    --color-lightgreen: rgb(11 115 60);
+    --color-chartreuse: rgb(211 241 77);
+    --color-medblue: rgb(55 177 254);
+    --color-lightblue: rgb(239 251 255);
+  
+    // Neutral Colors
+    --color-black: rgb(0 0 0);
+    --color-white: rgb(255 255 255);
+    --color-darkgray: rgb(82 82 82);
+    --color-medgray: rgb(126 126 126);
+    --color-lightgray: rgb(242 242 242);
+    --color-offwhite: rgba(251 251 249 / 100%);
+  
+    // Application Color
+    --color-grey-rgba: rgba(217 217 217 / 50%);
+  
+    // Text Color
+    --color-text: var(--color-darkgray);
+  
+    // SidePanel
+    --color-sidepanel: rgba(0 0 0 / 85%);
+  
+    // Accordian Colors
+    --color-palelavender: rgba(236 211 244 / 100%);
+    --color-freshair: rgba(172 234 255 / 100%);
+    --color-wildstrawberry: rgba(255 53 174 / 100%);
+    --color-foldergreen: rgba(49 166 76 / 100%);
+    --color-deepsaffron: rgba(254 153 49 / 100%);
+    --color-mustard: rgba(255 222 51 / 100%);
+    --color-error: rgba(227 33 68 / 100%);
+    --color-transparent: rgba(0 0 0 / 0%);
+  }
+  
+  [data-bg='offwhite'] {
+    background-color: var(--color-offwhite);
+  }
+  
+  [data-bg='darkgreen'] {
+    background-color: var(--color-darkgreen);
+  
+    a {
+      color: var(--color-white);
+  
+      &:hover {
+        color: var(--color-lightgreen);
+      }
+    }
+  }
+  
+  [data-bg='lightgreen'] {
+    background-color: var(--color-lightgreen);
+  }
+  
+  [data-bg='chartreuse'] {
+    background-color: var(--color-chartreuse);
+  }
+  
+  [data-bg='medblue'] {
+    background-color: var(--color-medblue);
+  }
+  
+  [data-bg='lightblue'] {
+    background-color: var(--color-lightblue);
+  }
+  
+  [data-bg='black'] {
+    background-color: var(--color-black);
+  }
+  
+  [data-bg='black'],
+  [data-bg='darkgray'],
+  [data-bg='medgray'],
+  [data-bg='darkgreen'],
+  [data-bg='lightgreen'],
+  [data-bg='medblue'],
+  [data-bg='sidepanel'] {
+    color: var(--color-white);
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    a.visually-hidden {
+      color: var(--color-white);
+    }
+  }
+  
+  [data-bg='white'] {
+    background-color: var(--color-white);
+  
+    &[data-heading-color='green'] {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        color: var(--color-lightgreen);
+      }
+    }
+  }
+  
+  [data-bg='darkgray'] {
+    background-color: var(--color-darkgray);
+  }
+  
+  [data-bg='medgray'] {
+    background-color: var(--color-medgray);
+  }
+  
+  [data-bg='lightgray'] {
+    background-color: var(--color-lightgray);
+  }
+  
+  [data-bg='sidepanel'] {
+    background-color: var(--color-sidepanel);
+  }
+  
+  [data-bg='white'],
+  [data-bg='lightgray'],
+  [data-bg='chartreuse'],
+  [data-bg='lightblue'] {
+    color: var(--color-text);
+  }
+  
+  [data-bg='lightgray'],
+  [data-bg='lightblue'] {
+    &[data-heading-color='green'] {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        color: var(--color-lightgreen);
+      }
+    }
+  }

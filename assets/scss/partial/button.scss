@@ -1,0 +1,100 @@
+/*
+  BUTTONS
+*/
+
+button,
+.button {
+  -webkit-box-align: center;
+  align-self: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  outline: 0;
+  cursor: pointer;
+  text-transform: none;
+  transition: all 0.25s var(--ease-in-out);
+  padding: 1rem 2.5rem;
+  width: auto;
+  background-color: var(--color-lightgreen);
+  color: var(--color-white);
+  border-radius: 3.75rem;
+  opacity: 1;
+  display: inline-flex;
+  gap: 0.5rem;
+  text-wrap: nowrap;
+  border: 2px solid var(--color-lightgreen);
+
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:hover,
+  &.hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline-offset: 5px;
+    outline: 2px solid rgb(11 115 60);
+  }
+
+  &:disabled,
+  &.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &[data-sz='sm'] {
+    padding: 0.75rem 2rem;
+  }
+
+  &[data-style='outlined'] {
+    background-color: transparent;
+    color: var(--color-lightgreen);
+    border: 2px solid var(--color-lightgreen);
+  }
+
+  &[data-style='text'] {
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    color: var(--color-lightgreen);
+    display: inline-flex;
+    gap: 0.5rem;
+
+    &::before {
+      content: attr(data-visual-label);
+      text-decoration: none;
+      text-underline-offset: 0.125rem;
+      transition: all 0.25s var(--ease-in-out);
+    }
+
+    &::after {
+      // @include arrow(rgb(11 115 60));
+
+      transition: all 0.25s var(--ease-in-out);
+      display: block;
+      width: 1rem;
+      aspect-ratio: 17/9;
+      content: '';
+      flex-shrink: 0;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:hover,
+    &.hover {
+      color: var(--color-lightgreen);
+      text-decoration: none;
+
+      &::before {
+        text-decoration: underline;
+      }
+    }
+  }
+}
